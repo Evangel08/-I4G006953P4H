@@ -1,0 +1,130 @@
+Microsoft Windows [Version 10.0.19044.1706]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\ASUS>pip install virtualenv
+Requirement already satisfied: virtualenv in c:\users\asus\appdata\local\programs\python\python310\lib\site-packages (20.14.1)
+Requirement already satisfied: platformdirs<3,>=2 in c:\users\asus\appdata\local\programs\python\python310\lib\site-packages (from virtualenv) (2.5.2)
+Requirement already satisfied: distlib<1,>=0.3.1 in c:\users\asus\appdata\local\programs\python\python310\lib\site-packages (from virtualenv) (0.3.4)
+Requirement already satisfied: filelock<4,>=3.2 in c:\users\asus\appdata\local\programs\python\python310\lib\site-packages (from virtualenv) (3.6.0)
+Requirement already satisfied: six<2,>=1.9.0 in c:\users\asus\appdata\local\programs\python\python310\lib\site-packages (from virtualenv) (1.16.0)
+WARNING: You are using pip version 22.0.4; however, version 22.1.1 is available.
+You should consider upgrading via the 'C:\Users\ASUS\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip' command.
+
+C:\Users\ASUS>cd desktop
+
+C:\Users\ASUS\Desktop>mkdirI4G006953P4H
+'mkdirI4G006953P4H' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\ASUS\Desktop>mkdir I4G006953P4H
+
+C:\Users\ASUS\Desktop>cd I4G006953P4H
+
+C:\Users\ASUS\Desktop\I4G006953P4H>python -m venv myEnv
+
+C:\Users\ASUS\Desktop\I4G006953P4H>
+C:\Users\ASUS\Desktop\I4G006953P4H>
+C:\Users\ASUS\Desktop\I4G006953P4H>dir
+ Volume in drive C has no label.
+ Volume Serial Number is A22B-DB99
+
+ Directory of C:\Users\ASUS\Desktop\I4G006953P4H
+
+05/31/2022  11:05 PM    <DIR>          .
+05/31/2022  11:05 PM    <DIR>          ..
+05/31/2022  11:05 PM    <DIR>          myEnv
+               0 File(s)              0 bytes
+               3 Dir(s)  442,461,614,080 bytes free
+
+C:\Users\ASUS\Desktop\I4G006953P4H>call myEnv/scripts/activate (myEnv)
+
+(myEnv) C:\Users\ASUS\Desktop\I4G006953P4H>pip install django
+Collecting django
+  Using cached Django-4.0.4-py3-none-any.whl (8.0 MB)
+Collecting tzdata
+  Using cached tzdata-2022.1-py2.py3-none-any.whl (339 kB)
+Collecting asgiref<4,>=3.4.1
+  Downloading asgiref-3.5.2-py3-none-any.whl (22 kB)
+Collecting sqlparse>=0.2.2
+  Using cached sqlparse-0.4.2-py3-none-any.whl (42 kB)
+Installing collected packages: tzdata, sqlparse, asgiref, django
+Successfully installed asgiref-3.5.2 django-4.0.4 sqlparse-0.4.2 tzdata-2022.1
+WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the 'C:\Users\ASUS\Desktop\I4G006953P4H\myEnv\Scripts\python.exe -m pip install --upgrade pip' command.
+
+(myEnv) C:\Users\ASUS\Desktop\I4G006953P4H>django-admin
+
+Type 'django-admin help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    runserver
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+Note that only Django core commands are listed as settings are not properly configured (error: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.).
+
+(myEnv) C:\Users\ASUS\Desktop\I4G006953P4H>django-admin startproject myproject
+
+(myEnv) C:\Users\ASUS\Desktop\I4G006953P4H>cd
+C:\Users\ASUS\Desktop\I4G006953P4H
+
+(myEnv) C:\Users\ASUS\Desktop\I4G006953P4H>cd myproject
+
+(myEnv) C:\Users\ASUS\Desktop\I4G006953P4H\myproject>dir
+ Volume in drive C has no label.
+ Volume Serial Number is A22B-DB99
+
+ Directory of C:\Users\ASUS\Desktop\I4G006953P4H\myproject
+
+05/31/2022  11:15 PM    <DIR>          .
+05/31/2022  11:15 PM    <DIR>          ..
+05/31/2022  11:15 PM               687 manage.py
+05/31/2022  11:15 PM    <DIR>          myproject
+               1 File(s)            687 bytes
+               3 Dir(s)  442,899,775,488 bytes free
+
+(myEnv) C:\Users\ASUS\Desktop\I4G006953P4H\myproject>python manage.py runsever
+Unknown command: 'runsever'. Did you mean runserver?
+Type 'manage.py help' for usage.
+
+(myEnv) C:\Users\ASUS\Desktop\I4G006953P4H\myproject>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+May 31, 2022 - 23:19:27
+Django version 4.0.4, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[31/May/2022 23:20:47] "GET / HTTP/1.1" 200 10697
+[31/May/2022 23:20:48] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[31/May/2022 23:20:48] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[31/May/2022 23:20:48] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[31/May/2022 23:20:48] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+Not Found: /favicon.ico
+[31/May/2022 23:20:48] "GET /favicon.ico HTTP/1.1" 404 2113
